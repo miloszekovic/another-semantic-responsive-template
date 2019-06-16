@@ -7,4 +7,4 @@ Another semantic responsive HTML/CSS/JS template
 
 ## gulp build
 
-## <a href="http://www.mze.ninja/demos/tech/">demo</a>
+<a href="http://www.mze.ninja/demos/tech/">Demo</a>
