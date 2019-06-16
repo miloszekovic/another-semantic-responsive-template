@@ -1,6 +1,5 @@
-# investintech-fe-task
-Front-end test za kompaniju Investintech, Beograd
-- semantic template
+# another-semantic-responsive-template
+Another semantic responsive HTML/CSS/JS template
 
 ## npm install
 
