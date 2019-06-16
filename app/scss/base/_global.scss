@@ -1,0 +1,89 @@
+/* global */
+
+html,
+body {
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 318px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $light;
+  color: $base-text;
+  @include font-size(1.6, 2.4);
+}
+
+body,
+body *,
+input,
+textarea,
+select {
+  @extend .base-font;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  @extend .fade;
+
+  &:hover {
+    @extend .hov;
+    color: rgba($blue, 0.8);
+  }
+
+  &:active {
+    @extend .act;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $base-text;
+}
+
+h1 {
+  color: white;
+  @include font-size(3.6, 3.6);
+
+  @media screen and (max-width: 600px) {
+    @include font-size(3, 3);
+  }
+
+  @media screen and (max-width: 470px) {
+    @include font-size(2.5, 3);
+  }
+
+  small {
+    font-weight: normal;
+    @include font-size(2.4, 2.4);
+
+    @media screen and (max-width: 600px) {
+      @include font-size(1.8, 1.8);
+    }
+
+    @media screen and (max-width: 470px) {
+      @include font-size(1.6, 1.6);
+    }
+  }
+}
+
+h2,
+h3 {
+  @include font-size(2.4, 2.4);
+}
+
+h4 {
+  @include font-size(1.8, 2.4);
+}
+
+h5 {
+  color: white;
+  @include font-size(1.6, 2.4);
+}

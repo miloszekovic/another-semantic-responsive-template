@@ -1,0 +1,163 @@
+/* header */
+
+header {
+  background: $dark;
+  width: $full;
+  height: 70px;
+  position: fixed;
+  z-index: 888;
+
+  @media screen and (max-width: 1280px) {
+    height: 56px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .logo {
+    padding: 20px 0 0 23px;
+
+    @media screen and (max-width: 1280px) {
+      padding: 15px 0 0 15px;
+    }
+
+    img {
+      height: 30px;
+      width: auto;
+      line-height: 0;
+
+      @media screen and (max-width: 1280px) {
+        height: 25px;
+      }
+    }
+  }
+
+  .main-nav {
+    margin: 0 23px 0 auto;
+
+    @media screen and (max-width: 1280px) {
+      display: none;
+      position: absolute;
+      z-index: 200;
+      left: 0;
+      top: 56px;
+      width: $full;
+      padding: 10px 10px 25px;
+      background: rgba($dark, 0.97);
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+
+      @media screen and (max-width: 1280px) {
+        display: block;
+      }
+
+      li {
+        padding-left: 24px;
+
+        @media screen and (max-width: 1280px) {
+          padding-left: 0;
+        }
+
+        a {
+          color: white;
+          font-weight: bold;
+          display: block;
+          @include font-size(1.6, 6.6);
+
+          @media screen and (max-width: 1280px) {
+            text-align: center;
+            @include font-size(1.8, 5);
+          }
+
+          &:hover {
+            color: rgba(white, 0.8);
+          }
+
+          &:active {
+            color: rgba(white, 0.6);
+          }
+        }
+
+        &.active a {
+          color: rgba(white, 0.6);
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    margin-right: 15px;
+    z-index: 999;
+    height: 19px;
+    margin-top: 8px;
+    height: 36px;
+    padding-top: 8px;
+    margin-left: auto;
+
+    @media screen and (max-width: 1280px) {
+      display: block;
+    }
+
+    .mobile-toggle {
+      width: 34px;
+      height: 34px;
+      position: relative;
+      display: block;
+
+      span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: $full;
+        background: white;
+        @include transition(transform 0.2s 0s);
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 8px;
+        }
+
+        &:nth-child(3) {
+          top: 16px;
+          width: 70%;
+          right: 0;
+        }
+      }
+
+      &.active {
+        margin-top: -4px !important;
+
+        span {
+          @include transition(transform 0.2s 0.25s);
+          background: white;
+
+          &:nth-child(1),
+          &:nth-child(3) {
+            top: 12px;
+          }
+
+          &:nth-child(1) {
+            @include rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            @include rotate(-45deg);
+            width: $full;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+/* contact us */
+
+.contact-us {
+  @media screen and (max-width: 980px) {
+    margin-top: 60px;
+  }
+
+  input,
+  textarea {
+    width: $full;
+    height: 38px;
+    border: 1px solid $border;
+    background: transparent;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    @extend .fade;
+
+    &:hover {
+      border: 1px solid $dark-text;
+    }
+
+    &:focus {
+      border: 1px solid $blue;
+    }
+  }
+
+  textarea {
+    height: 130px;
+    resize: none;
+
+    @media screen and (max-width: 1360px) {
+      height: 140px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      height: 190px;
+    }
+
+    @media screen and (max-width: 1140px) {
+      height: 210px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      height: 260px;
+    }
+
+    @media screen and (max-width: 980px) {
+      height: 100px;
+    }
+  }
+
+  button {
+    text-align: center;
+    border: 0;
+    color: white;
+    background: $blue;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    @extend .fade;
+
+    &:hover {
+      @extend .hov;
+    }
+
+    &:active {
+      @extend .act;
+    }
+  }
+}

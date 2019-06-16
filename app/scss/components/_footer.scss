@@ -1,0 +1,46 @@
+/* footer */
+
+footer {
+  background: $dark;
+  text-align: center;
+  padding: 30px 0;
+
+  @media screen and (max-width: 1280px) {
+    padding: 30px 15px;
+  }
+
+  .soc-icons,
+  .soc-icons *,
+  .sub-nav *,
+  .copy {
+    color: $dark-text;
+  }
+
+  .soc-icons {
+    padding-top: 40px;
+
+    ul li {
+      @extend .floating;
+      padding: 0 14px;
+
+      i {
+        @include font-size(3.2, 2.4);
+      }
+    }
+  }
+
+  .sub-nav {
+    padding: 50px 0 40px;
+
+    ul li {
+      @extend .floating;
+      padding: 0 11px;
+
+      @media screen and (max-width: 900px) {
+        display: block;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+  }
+}

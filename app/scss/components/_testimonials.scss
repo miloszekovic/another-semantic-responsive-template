@@ -1,0 +1,39 @@
+/* testimonials */
+
+.test-contact-wrapp {
+  background: white;
+  padding: 35px 15px 60px;
+
+  h3 {
+    padding-bottom: 30px;
+  }
+}
+
+.testimonials {
+  article {
+    display: flex;
+    padding-bottom: 30px;
+
+    @media screen and (max-width: 500px) {
+      display: block;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    div:first-child {
+      flex-basis: 110px;
+      flex-shrink: 0;
+      padding-top: 7px;
+
+      @media screen and (max-width: 500px) {
+        padding: 0 0 10px;
+      }
+    }
+
+    div:last-child {
+      flex-grow: 1;
+    }
+  }
+}

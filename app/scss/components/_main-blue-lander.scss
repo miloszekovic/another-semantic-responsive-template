@@ -1,0 +1,54 @@
+/* main blue lander */
+
+.main-blue-lander {
+  padding: 60px 0 30px;
+  background: -webkit-linear-gradient(180deg, #479ae3 0%, #0078d9 100%);
+  background: linear-gradient(180deg, #479ae3 0%, #0078d9 100%);
+
+  @media screen and (max-width: 1280px) {
+    padding: 40px 0;
+  }
+
+  img {
+    @extend .img;
+
+    @media screen and (max-width: 1280px) {
+      display: block;
+      margin: $center;
+      width: 60%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 80%;
+    }
+  }
+
+  & > div:last-child {
+    padding-top: 40px;
+
+    @media screen and (max-width: 1360px) {
+      padding-top: 30px;
+    }
+  }
+
+  .main-points {
+    padding-top: 30px;
+
+    li {
+      color: white;
+
+      @media screen and (max-width: 600px) {
+        padding: 3px 0;
+      }
+
+      span {
+        width: 28px;
+        display: inline-block;
+
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

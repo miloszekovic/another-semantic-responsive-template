@@ -1,0 +1,109 @@
+/* grid */
+
+main,
+.container {
+  width: 1200px;
+  margin: $center;
+
+  @media screen and (max-width: 1360px) {
+    width: 1120px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 1024px;
+  }
+
+  @media screen and (max-width: 1140px) {
+    width: 980px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 900px;
+  }
+
+  @media screen and (max-width: 980px) {
+    width: $full;
+  }
+}
+
+main {
+  padding-top: 70px;
+
+  @media screen and (max-width: 1280px) {
+    padding-top: 56px;
+  }
+}
+
+.grid-2-col,
+.grid-3-col,
+.grid-2-3-col {
+  display: flex;
+  flex-wrap: wrap;
+  height: $full;
+}
+
+.grid-2-col {
+  @media screen and (max-width: 1280px) {
+    display: block;
+  }
+
+  & > div {
+    width: $full / 2;
+    padding: 0 23px;
+
+    @media screen and (max-width: 1280px) {
+      width: $full;
+      text-align: center;
+    }
+  }
+}
+
+.grid-3-col {
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  & > article {
+    width: $full / 3;
+    padding: 0 23px;
+
+    @media screen and (max-width: 768px) {
+      width: $full;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $border;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.grid-2-3-col {
+  @media screen and (max-width: 980px) {
+    display: block;
+  }
+
+  & > section {
+    padding: 0 23px;
+  }
+
+  & > section:first-child {
+    width: $full / 3 + $full / 3;
+
+    @media screen and (max-width: 980px) {
+      width: $full;
+    }
+  }
+
+  & > section:last-child {
+    width: $full / 3;
+
+    @media screen and (max-width: 980px) {
+      width: $full;
+    }
+  }
+}
